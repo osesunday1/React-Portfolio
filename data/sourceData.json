@@ -1,0 +1,19 @@
+[
+    {
+        "label": "Javascript",
+        "value": 85
+    },
+    {
+        "label": "HTML, CSS",
+        "value": 99
+    },
+    {
+        "label": "Python",
+        "value": 77
+    },
+
+    {
+        "label": "PHP",
+        "value": 70
+    }
+]

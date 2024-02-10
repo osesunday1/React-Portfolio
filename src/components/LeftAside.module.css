@@ -1,0 +1,216 @@
+.leftAside {
+    width: 80%;
+    text-align: center;
+}
+
+.menuBar {
+    height: 70px;
+    border-radius: 10px;
+    color: var(--dark-color);
+    background: var(--bg-color);
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+.menuBar i {
+    font-size: 20px;
+}
+
+
+.menuBar:hover i {
+    color:var(--green-color);
+}
+
+.sideNav{
+    margin-top: 30px;
+    border-radius: 10px;
+    background: var(--bg-color);
+    transform: translateX(-700%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.showNav {
+    transform: translateX(0%); /* Show nav by moving it back to its original position */
+  }
+
+.leftAside ul {
+    padding: 0; 
+    margin: 0; 
+    list-style-type: none; 
+    display: flex;
+    flex-direction: column; 
+    
+}
+
+.leftAside ul li {
+    display: block; 
+    align-items: center; 
+    justify-content: center; 
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+li i{
+    font-size: 20px;
+    color: var(--dark-color);
+    padding: 10px;
+}
+
+
+li:hover i,
+li:hover p 
+{
+    color: var(--green-color);
+}
+
+li:active{
+    background: var(--dark-color);
+}
+.nav a:global(.active) {
+    background-color: var(--dark-color);
+  }
+  
+
+
+li p {
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+
+
+@media(max-width: 576px){
+    .leftAside {
+        display: block;
+    }
+
+    .menuBar {
+        display: none;
+    }
+
+    .sideNav{
+        margin-top: 0%;
+        border-radius: 10px;
+        background: var(--darkGreen-color);
+        transform: translateX(0%);
+        border-radius: 0;
+        transition: transform 0.3s ease-in-out;
+        align-items: center;
+        justify-items: center;
+        align-items: center;
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+        left: 0;
+    }
+    
+    .leftAside ul {
+        padding: 0; 
+        margin: 0; 
+        list-style-type: none; 
+        display: flex;
+        flex-direction: row; 
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .leftAside ul li {
+        display: flex;
+        width: 80px; 
+        margin: 10px 20px;
+        cursor: pointer;
+        background: var(--bg-color);
+        padding: 0px;
+        
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center; 
+        justify-items: center;
+        text-align: center;
+    }
+    
+    li i{
+        font-size: 30px;
+        color: var(--dark-color);
+        padding: 10px;
+    }
+    
+    li p {
+        display: none;
+    }
+    
+    
+}
+
+
+@media (min-width: 577px) and (max-width: 768px){
+    .leftAside {
+        width: 80%;
+        text-align: center;
+    }
+
+    .menuBar {
+    height: 70px;
+    border-radius: 10px;
+    color: var(--dark-color);
+    background: var(--bg-color);
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    }
+
+    .sideNav{
+        margin-top: 30px;
+        border-radius: 10px;
+        background: var(--bg-color);
+        transform: translateX(-700%);
+        transition: transform 0.3s ease-in-out;
+        position:relative;
+        z-index: auto;
+        width: 100%;
+        left: auto;
+    }
+
+
+    .showNav {
+        transform: translateX(0%); /* Show nav by moving it back to its original position */
+      }
+    
+    .leftAside ul {
+        padding: 0; 
+        margin: 0; 
+        list-style-type: none; 
+        display: flex;
+        flex-direction: column; 
+        
+    }
+
+
+    .leftAside ul li {
+        display: block; 
+        align-items: center; 
+        justify-content: center; 
+        margin-top: 20px;
+        cursor: pointer;
+    }
+    
+    li i{
+        font-size: 20px;
+        color: var(--dark-color);
+        padding: 10px;
+    }
+    
+    li p {
+        color: var(--green-color);
+    }
+    
+    
+}

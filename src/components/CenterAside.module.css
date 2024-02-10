@@ -1,0 +1,150 @@
+
+
+.centerAside {
+    background: var(--bg-color);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    position: relative; 
+    z-index: 2;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    
+}
+
+.centerAside img {
+    width: 100%; 
+    max-height: 400px;
+    object-fit:cover;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.centerAside .cardContent {
+    background:var(--bg-color);
+    position: relative;
+}
+
+.centerAside .cardContent .name{
+    position: relative;
+    display: inline-block;
+    margin-top: 7%;
+}
+
+.centerAside .cardContent .name h2{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.centerAside .cardContent .name::after {
+Content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+    bottom: 5px; 
+    width: 150px; 
+    height: 1px; 
+    background: var(--dark-color);
+  }
+
+.cardContent .specialty{
+    margin-top: 5%;
+  }
+.centerAside .cardContent .socialIcons{
+    margin: 30px auto;
+  }
+
+.centerAside .cardContent .socialIcons i{
+    font-size: 20px;
+    margin: 16px;
+    cursor: pointer;
+  }
+
+.cardContent .socialIcons i:hover{
+    color: var(--green-color);
+  }
+
+  .centerAside .cardContent .cardButtons{
+    margin-top: 15px;
+    height: 50px;
+  }
+
+  .centerAside .cardContent .cardButtons button{
+    all: unset;
+    margin:auto 10px;
+    height: 50px;
+    width: 140px;
+    cursor: pointer;
+    background: var(--darkGreen-color);
+    font-size: 12px;
+    color: var(--white-color);
+  }
+
+  .centerAside .cardContent .cardButtons button:hover{
+    background: var(--green-color);
+    color: var(--dark-color);
+  }
+
+  /*===============media querry==============*/
+
+  @media(max-width: 576px){
+    .centerAside {
+      margin-top: 5%;
+      box-shadow:none;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .centerAside .cardContent .name{
+      position: relative;
+      display: inline-block;
+      margin-top: 2%;
+  }
+  
+  .centerAside .cardContent .name h2{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .centerAside .cardContent .name::after {
+      display: none;
+    }
+  
+  .cardContent .specialty{
+      margin-top: 1%;
+    }
+  .centerAside .cardContent .socialIcons{
+      margin: 10px auto;
+    }
+  
+  .centerAside .cardContent .socialIcons i{
+      font-size: 20px;
+      margin: 16px;
+      cursor: pointer;
+    }
+  
+  .cardContent .socialIcons i:hover{
+      color: var(--green-color);
+    }
+  
+    .centerAside .cardContent .cardButtons{
+      margin-top: 5px;
+      height: 50px;
+    }
+  
+    .centerAside .cardContent .cardButtons button{
+      all: unset;
+      margin:auto 10px;
+      height: 50px;
+      width: 140px;
+      cursor: pointer;
+      background: var(--darkGreen-color);
+      font-size: 12px;
+      color: var(--white-color);
+    }
+  
+    .centerAside .cardContent .cardButtons button:hover{
+      background: var(--green-color);
+      color: var(--dark-color);
+    }
+
+  }

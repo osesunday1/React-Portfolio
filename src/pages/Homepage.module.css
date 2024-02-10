@@ -1,0 +1,43 @@
+.main {
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: grid;
+    grid-template-columns: 100px 30% 1fr;
+    max-width: 1268px;
+    height: 674px;
+}
+
+/* ========================= media querries ==========================*/
+@media(max-width: 576px){
+    .main {
+        margin: auto;
+        margin-bottom: 55%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 95%;
+        height: 100%;
+        justify-items: center; /* Center items horizontally */
+        align-content: center; /* Center the grid content vertically */
+        align-items: center; /* Center items vertically within their cells */
+    }
+    
+}
+
+@media (min-width: 577px) and (max-width: 1287px){
+    .main {
+        margin: auto;
+        margin-bottom: 55%;
+        display: grid;
+        grid-template-columns: 30% 1fr;
+        width: 95%;
+        height: 100%;
+        justify-items: center; /* Center items horizontally */
+        align-content: center; /* Center the grid content vertically */
+        align-items: center; /* Center items vertically within their cells */
+    }
+    
+}
+
+
+

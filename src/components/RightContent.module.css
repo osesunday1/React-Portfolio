@@ -1,0 +1,207 @@
+.content{
+    display: grid;
+    max-width: 95%;
+    margin-inline: auto;
+    padding-inline: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5em;
+}
+
+
+
+.content .heading{
+grid-column: 1 / -1;
+border-bottom: solid 1px var(--green-color);
+margin-bottom: 0px;
+font-size: var(--h1-font);
+margin-top: 5%;
+display: flex;
+justify-content: space-between; 
+}
+
+.content .heading h1{
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+.content .info{
+    margin: 0px 0px;
+    height: 250px;
+    width: 100%;
+    overflow: auto;
+}
+
+
+.info .residence{
+    display: flex;
+    margin-top: 5%;
+    position: relative;
+    width: 100%; 
+    justify-content: space-between; 
+    
+}
+
+
+.info .residence::after {
+    content: ''; /* Required for the pseudo-element to display */
+    position: absolute;
+    left: 0; /* Adjust this value to control the starting point of the border */
+    right: 100%; /* Adjust this value to control the ending point of the border */
+    bottom: 20%; /* Aligns the pseudo-element at the bottom */
+    border-bottom: 1px solid var(--green-color); /* Your border styles */
+    width: 50%; /* Example: Adjust this value to control the length */
+    margin-left: 0; /* Centers the border; adjust as needed */
+}
+
+.info .stack{
+    margin-bottom: 0px;
+    font-size: var(--h1-font);
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between; 
+    }
+
+.stack span{
+        font-style: italic;
+    }
+
+.residence h4{
+    font-size: 18px;
+    font-weight:bold;
+}
+
+.residence .paragraph{
+    font-size: 18px;
+    text-transform:uppercase;
+    margin-right: 10px;
+    float: right;
+    color: var(--darkGreen-color);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 6px; 
+    cursor: pointer;
+  }
+
+::-webkit-scrollbar-track {
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 6px;
+    
+  }
+
+
+.content .info p{
+  font-size: 16px;
+  line-height: 1.5; 
+  padding: 0px 10px; 
+  text-align: justify; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+
+.content .info:first-child {
+    border-right: 1px solid var(--green-color);
+    padding-right: 2em; 
+}
+
+
+.content .info:last-child {
+    border-left: 1px solid var(--green-color); 
+    padding-left: 0.5em; 
+}
+
+.content .info {
+    box-sizing: border-box;
+}
+
+span{
+    color: var(--darkGreen-color);
+}
+
+.content .chart{
+    height: 250px;
+    width: 250px;
+}
+
+.chartInfo{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 22px;
+    text-align: center;
+}
+
+.chartInfoPercentage{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+}
+
+
+
+
+.content2 .info2{
+    height: 220px;
+    max-width:100%;
+    display: flex;            
+    overflow-x: auto;    
+    cursor:grab;  
+    gap: 2em; 
+    width: 95%;
+    margin: 15px auto;
+  }
+
+
+.heading2{
+    display: block;
+    border-bottom: solid 1px var(--green-color);
+    margin-bottom: 0px;
+    width: 95%;
+    margin: 25px auto;
+}
+
+.heading2 h1{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/*========================media querry ===========================*/
+@media(max-width: 576px){
+   
+    .content{
+        display: grid;
+        max-width: 95%;
+        margin-inline: auto;
+        padding-inline: 24px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0.5em;
+    }
+
+    .info .residence::after {
+        display: none;
+    }
+    
+
+    .content .info:last-child {
+        border-left: none; 
+        padding-left: 0px; 
+    }
+}

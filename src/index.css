@@ -1,0 +1,83 @@
+:root{
+	--text-color: #050505;
+    --body-color:  linear-gradient(to bottom right, #1abc9c, #2ecc71);
+	--bg-color: #ebf5fc;
+    --line-color:#ffc131;
+	--dark-color: #000000;
+    --green-color:#1abc9c;
+    --darkGreen-color:#0a7560;
+    --white-color:#ffffff;
+	--h1-font: 1.8rem;
+    --h1-weight:bold;
+	--h2-font: 2.9rem;
+	--p-font: 1rem;
+}
+
+h1, h2, p{
+    color: var(--text-color);
+}
+
+h5{
+    font-size: 17px;
+    font-weight:bold;
+    color: black;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #74D680, #378B29);
+    height: 100vh;
+
+}
+
+header, footer {
+    background-color:linear-gradient(to bottom right, #1abc9c, #2ecc71);
+    color: white;
+    text-align: center;
+    padding: 1em;
+    height: 50px;
+}
+
+
+
+/*-----------------------vertical timeline -----------------------*/
+
+
+.vertical-timeline-element--education h3 {
+    color: var(--darkGreen-color); /* Changes the color of <h3> tags */
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.vertical-timeline-element--education p {
+    font-style: italic; /* Changes the font style of <p> tags */
+}
+
+.vertical-timeline-element--education .vertical-timeline-element-content {
+    background: var(--green-color); /* Change to the desired background color */
+}
+
+.vertical-timeline-element-content-arrow{
+    border-right: 7px solid var(--green-color);
+    
+}
+
+.vertical-timeline-element-date{
+    margin-left: 10px;
+}
+
+.vertical-timeline-element-date{
+    margin-right: 10px;
+}
+
+
+
+
+@media(max-width: 500px){
+    header, footer {
+        display: none;
+    }
+    
+}

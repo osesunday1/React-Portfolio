@@ -1,0 +1,120 @@
+
+
+.content{
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    margin: auto;
+}
+
+.content .heading{
+    grid-column: 1 / -1;
+    border-bottom: solid 1px var(--green-color);
+    margin-bottom: 0px;
+    font-size: var(--h1-font);
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: space-between; 
+    width: 95%;
+    }
+    
+.content .heading h1{
+    font-size: 0.7em;
+    font-weight: bold;
+}
+    
+
+
+.card1{
+    position: relative;
+    width: 330px;
+    height: 310px;
+    box-shadow: inset 5px 5px 5px rgba(0,0,0,0.07),
+                inset -5px -5px 5px rgba(255, 255, 255, 0.9),
+                5px 5px 5px rgba(0,0,0,0.09),
+                -5px -5px 5px rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    margin: 30px;
+}
+
+.card1 .box{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: #ffffff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.card1:hover .box{
+    transform: translateY(-20px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.card1 .box .content{
+    padding: 20px;
+    text-align: center;
+    display: block;
+}
+
+.card1 .box .content h3{
+    font-size: 1.8em;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.card1 .box .content p{
+    font-size: 1em;
+    font-weight: 300;
+    color: #777;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.card1 .box .content .paragraph{
+    max-height: 160px;
+    overflow-y: auto;
+}
+
+.card1 .box .content button{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: var(--darkGreen-color);
+    margin-top: 5px;
+    border-radius: 20px;
+    color: var(--white-color);
+    font-weight: 400;
+    font-size: 12px;
+    width: 100px;
+    cursor: pointer;
+    border: none;
+}
+
+.card1 .box .content button:hover{
+    background: var(--green-color);
+    color: var(--black-color);
+}
+
+
+/*========================media querry ===========================*/
+@media (min-width: 577px) and (max-width: 1287px){
+
+    .content{
+        width: 95%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2px;
+        margin: auto;
+    }
+    
+}

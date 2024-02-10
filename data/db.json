@@ -1,0 +1,23 @@
+{
+    "about":
+        {
+            "name": "Oseyenbhin Osemeahon",
+            "residence": "Canada",
+            "province": "Ontario",
+            "city": "London, ON",
+            "language": ["English", "Turkish"],
+            "Hobies": ["Gamind", "Cinematography Enthusiast"],
+            "phone": 2263857007,
+            "email": "ose.sunday@gmail.com",
+            "freelance": "Available",
+            "myStory": "I am a passionate programming enthusiast known for my unyielding eagerness and readiness to tackle challenging projects. With a knack for problem-solving and a perpetual curiosity for technological advancements, I thrive in environments that push the boundaries of his programming skills. Beyond his professional pursuits, he has a genuine love for meeting new people and immersing himself in diverse cultures. This combination of technical proficiency and cultural openness makes John a unique and valuable contributor in any collaborative setting.",
+            "frontendSkills": [{"name": "REACT", "value": 85}, {"name": "HTML, CSS", "value": 95},  { "name": "Javascript", "value" :90}, {"name": "Wordpress", "value": 75},  { "name": "Photoshop", "value" :90}],
+            "backendSkills": [{"name": "Node JS", "value": 50}, {"name": "Django", "value": 75},  { "name": "Postgres", "value" :85}, {"name": "Mongo DB", "value": 50}],
+            "codingSkills": [ { "name": "Javascript", "value" :85}, {"name": "Python", "value":75},  {"name":"PHP", "value": 70}, {"name":"C#", "value": 40}],
+            "reactJob": [{"name":"Blog App", "summary":"A dynamic blog website"} , {"name":"Travel Planner", "summary":"A react JS App to help travelers efficiently plan to-do list"}, {"name":"Accordion", "summary":"Just a display of chained and loose Accordion"}, {"name":"Movie Database", "summary":"An app that collects a plethora of imdb movies and displays them with their rating based on user querry"} ],
+            "djangoJob": [{"name":"Ecommerce App", "summary":"An e-commerce app made for a bouquet company"}, {"name":"Dentist Site", "summary":"A  website made made to publicise and book clients for a dental hospital"}, {"name":"Company Site", "summary":"A travel agency website made made to store and manage clients"}]
+        }
+
+    
+
+}

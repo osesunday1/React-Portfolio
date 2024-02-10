@@ -1,0 +1,36 @@
+
+.rightAside {
+    background: var(--bg-color);
+    height: 95%;
+    width: 100%;
+    margin: auto;
+    border-top-right-radius: 7px; 
+    border-bottom-right-radius: 7px;
+    overflow: auto;
+}
+
+
+/*========================media querry ===========================*/
+@media(max-width: 576px){
+
+    .rightAside {
+        background: var(--bg-color);
+        height: 95%;
+        width: 100%;
+        margin-top: 5%;
+        border-top-right-radius: 7px; 
+        border-bottom-right-radius: 7px;
+        overflow: auto;
+        border-radius: 10px;
+    }
+    
+}
+
+
+@media (min-width: 577px) and (max-width: 1287px){
+    .rightAside {
+        grid-column: 1 / -1;
+    }
+
+}
+

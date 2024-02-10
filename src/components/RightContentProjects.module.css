@@ -1,0 +1,31 @@
+
+.projectMenu {
+    display: flex;
+    flex-direction: row; /* Explicitly stating, even though it's the default */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    margin-top: 10px;
+    width: 95%;
+    
+}
+
+.projectMenu ul{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    gap: 1em;
+}
+
+.projectMenu ul  li{
+    list-style-type: none;
+    width: 90px;
+    height: 30px;
+    background: var(--darkGreen-color);
+    color: #fff;
+    display: flex;
+    align-items: center; /* Vertically centers the content */
+    justify-content: center;
+    border-radius: 7px;
+    cursor: pointer;
+}
+

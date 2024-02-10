@@ -1,0 +1,13 @@
+
+
+
+
+/*========================media querry ===========================*/
+@media(max-width: 576px){
+
+    .content{
+        display: grid;
+        max-width: 99%;
+        margin-inline: auto;
+    }
+}
