@@ -20,6 +20,9 @@
     font-size: 20px;
 }
 
+.menuBar:active i{
+    font-size: 10px;
+} 
 
 .menuBar:hover i {
     color:var(--green-color);
@@ -68,20 +71,16 @@ li:hover p
     color: var(--green-color);
 }
 
-li:active{
-    background: var(--dark-color);
+li:active i{
+    font-size: 10px;
 }
-.nav a:global(.active) {
-    background-color: var(--dark-color);
-  }
-  
 
+  
 
 li p {
     margin-top: 5px;
     font-size: 12px;
 }
-
 
 
 @media(max-width: 576px){
