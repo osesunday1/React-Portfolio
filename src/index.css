@@ -6,6 +6,7 @@
 	--dark-color: #000000;
     --green-color:#1abc9c;
     --darkGreen-color:#0a7560;
+    --bg-green:#378B29;
     --white-color:#ffffff;
 	--h1-font: 1.8rem;
     --h1-weight:bold;
@@ -32,13 +33,6 @@ body {
 
 }
 
-header, footer {
-    background-color:linear-gradient(to bottom right, #1abc9c, #2ecc71);
-    color: white;
-    text-align: center;
-    padding: 1em;
-    height: 50px;
-}
 
 
 
@@ -76,8 +70,14 @@ header, footer {
 
 
 @media(max-width: 500px){
-    header, footer {
-        display: none;
+    body{ 
+        background: var(--bg-green);
     }
     
+}
+
+@media (min-width: 577px) and (max-width: 767px){
+    body{ 
+        background: var(--bg-green);
+    }
 }

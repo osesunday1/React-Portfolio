@@ -6,15 +6,14 @@ import RightContent from '../components/RightContent';
 import styles from './Homepage.module.css'
 import RightContentProjects from '../components/RightContentProjects';
 
-const Homepage = ({personalInfo, isLoading, toggleNav, isNavVisible}) => {
+const Homepage = ({personalInfo, isLoading}) => {
 
    
 
     return (  
         <>
-        <header> </header>
         <section className={styles.main}>
-            <LeftAside toggleNav={toggleNav} isNavVisible={isNavVisible}/>
+            <LeftAside />
             <CenterAside />
 
 
@@ -24,7 +23,7 @@ const Homepage = ({personalInfo, isLoading, toggleNav, isNavVisible}) => {
             </RightAside>
             
         </section>
-         <footer></footer>
+        
         </>
     );
 }

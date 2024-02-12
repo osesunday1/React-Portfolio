@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from './LeftAside.module.css'
 import {NavLink} from "react-router-dom"
 
@@ -6,7 +7,16 @@ import { faBars, faUser, faFile, faDisplay} from '@fortawesome/free-solid-svg-ic
 
 
 
-const LeftAside = ({isNavVisible, toggleNav}) => {
+const LeftAside = () => {
+
+
+    const [isNavVisible, setIsNavVisible] = useState(false);
+
+    const toggleNav = () => {
+      setIsNavVisible(!isNavVisible);
+    };
+
+
     return ( 
         <>
         <section className={styles.leftAside}>

@@ -24,10 +24,9 @@
     
 }
 
-@media (min-width: 577px) and (max-width: 1287px){
+@media (min-width: 577px) and (max-width: 767px){
     .main {
-        margin: auto;
-        margin-bottom: 55%;
+        margin: 4% auto;
         display: grid;
         grid-template-columns: 30% 1fr;
         width: 95%;
@@ -35,6 +34,23 @@
         justify-items: center; /* Center items horizontally */
         align-content: center; /* Center the grid content vertically */
         align-items: center; /* Center items vertically within their cells */
+    }
+    
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .main {
+        display: grid;
+        grid-template-columns: 40% 1fr;
+        width: 95%;
+        height: 800px;
+        margin: auto;
+        margin-top: 10%;
+        justify-items: center; /* Center items horizontally */
+        align-content: center; /* Center the grid content vertically */
+        align-items: center;
+        justify-content: center;
     }
     
 }

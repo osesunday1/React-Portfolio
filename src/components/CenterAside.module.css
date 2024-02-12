@@ -77,6 +77,7 @@ Content: '';
     background: var(--darkGreen-color);
     font-size: 12px;
     color: var(--white-color);
+    font-size: large;
   }
 
   .centerAside .cardContent .cardButtons button:hover{
@@ -147,4 +148,14 @@ Content: '';
       color: var(--dark-color);
     }
 
+  }
+
+
+  @media (min-width: 768px) and (max-width: 1024px){
+    .centerAside {
+      margin-top: 5%;
+      box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+      height: 100%;
+      z-index: 0;
+    }
   }

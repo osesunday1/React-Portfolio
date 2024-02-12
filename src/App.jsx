@@ -12,11 +12,7 @@ const App = () => {
   const[personalInfo, setPersonalInfo] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
-  const [isNavVisible, setIsNavVisible] = useState(false);
 
-  const toggleNav = () => {
-    setIsNavVisible(!isNavVisible);
-  };
 
   useEffect(function(){
     
@@ -42,7 +38,7 @@ const App = () => {
     <BrowserRouter>
         <Routes>
               
-              <Route path="/" element= {<Homepage personalInfo= {personalInfo} isLoading={isLoading} isNavVisible={isNavVisible} toggleNav={toggleNav} />} >
+              <Route path="/" element= {<Homepage personalInfo= {personalInfo} isLoading={isLoading} />} >
                     <Route path="/" element= {<RightContent personalInfo= {personalInfo} isLoading={isLoading}/>} />
                     <Route path="about" element= {<RightContent personalInfo= {personalInfo} isLoading={isLoading}/>} />
                     <Route path="education" element= {<RightContentEducation />} />

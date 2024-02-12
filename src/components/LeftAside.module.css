@@ -171,7 +171,7 @@ li p {
         margin-top: 30px;
         border-radius: 10px;
         background: var(--bg-color);
-        transform: translateX(-700%);
+        transform: translateX(0%);
         transition: transform 0.3s ease-in-out;
         position:relative;
         z-index: auto;
@@ -213,4 +213,64 @@ li p {
     }
     
     
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .leftAside {
+        grid-column: 1 / -1;
+        width: 80%;
+        align-items: center;
+        display:flex;
+        margin-bottom: 3%;
+        gap: 20px;
+    }
+
+    .menuBar {
+        height: 70px;
+        width: 100px;
+        border-radius: 10px;
+        color: var(--dark-color);
+        background: var(--bg-color);
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        cursor: pointer;
+        }
+
+    .sideNav{
+        margin-top: 0px;
+        height: 70px;
+        border-radius: 10px;
+        background: var(--bg-color);
+        transform: translateX(700%);
+        transition: transform 0.5s ease-in-out;
+        position:relative;
+        z-index: auto;
+        width: 90%;
+        left: auto;
+    }
+
+    .showNav {
+        transform: translateX(0%); /* Show nav by moving it back to its original position */
+      }
+
+    .leftAside ul {
+        padding: 0; 
+        margin: 0; 
+        list-style-type: none; 
+        display: flex;
+        flex-direction: row; 
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .leftAside ul li {
+        display: block; 
+        align-items: center; 
+        justify-content: center; 
+        margin: 7px auto;
+        cursor: pointer;
+    }
+
 }

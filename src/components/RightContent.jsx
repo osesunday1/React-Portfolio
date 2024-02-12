@@ -10,12 +10,12 @@ import styled from 'styled-components';
 
 const Heading1 = styled.div`
 display: none; /* Hide by default */
-@media (max-width: 500px) {
+@media (max-width: 1024px) {
 display: block; /* Show on small screens}`
 
 const Heading2 = styled.div`
 display: none; /* Hide by default */
-@media (min-width: 500px) {
+@media (min-width: 1024px) {
 display: block; /* Show on small screens}`
 
 

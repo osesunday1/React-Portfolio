@@ -1,7 +1,8 @@
 import styles from './CenterAside.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 //import {faPhoneVolume} from '@fortawesome/free-solid-svg-icons'
-import { faTwitter, faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter, faLinkedin, faGithub, faInstagram} from '@fortawesome/free-brands-svg-icons';
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 
 const CenterAside = () => {
@@ -28,8 +29,7 @@ const CenterAside = () => {
             </div>
 
             <div className={styles.cardButtons}>
-                <button>DOWNLOAD CV</button>
-                <button>CONTACT ME</button>
+            <button><i><FontAwesomeIcon icon={faDownload} /></i></button>
             </div>
         </div>
         </section>
