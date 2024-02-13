@@ -1,4 +1,6 @@
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faGithub} from '@fortawesome/free-brands-svg-icons';
 import styles from './ReactProjects.module.css'
 
 
@@ -31,7 +33,13 @@ const ReactProjects = ({personalInfo})=>{
                                 <p>{reac.summary}</p>
                             </div>
 
-                            <button>Read More</button>
+                            
+                                <a href={reac.url} target="_blank" rel="noopener noreferrer">
+                                    <button> 
+                                    <i><FontAwesomeIcon icon={faGithub} /></i>
+                                    </button>
+                                </a>
+                                
                         </div>
                     </div>
                 </div>

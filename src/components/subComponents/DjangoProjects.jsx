@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faGithub} from '@fortawesome/free-brands-svg-icons';
 import styles from './DjangoProjects.module.css'
 
 
@@ -27,7 +29,9 @@ const DjangoProjects = ({personalInfo}) => {
                                 <p>{djang.summary}</p>
                             </div>
 
-                            <button>Read More</button>
+                                <a href={djang.url} target="_blank" rel="noopener noreferrer">
+                                <button><i><FontAwesomeIcon icon={faGithub} /></i></button>
+                                </a>
                         </div>
                     </div>
                 </div>
