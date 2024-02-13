@@ -16,7 +16,7 @@
     gap: 1em;
 }
 
-.projectMenu ul  li{
+.projectMenu ul  .inactive{
     list-style-type: none;
     width: 90px;
     height: 30px;
@@ -29,3 +29,19 @@
     cursor: pointer;
 }
 
+
+
+ul .activeLink {
+    background: #bd3939; 
+    color: #000; 
+    list-style-type: none;
+    width: 90px;
+    height: 30px;
+    background: var(--green-color);
+    color: #fff;
+    display: flex;
+    align-items: center; /* Vertically centers the content */
+    justify-content: center;
+    border-radius: 7px;
+    cursor: pointer;
+  }

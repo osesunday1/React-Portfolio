@@ -22,11 +22,11 @@ const ProjectMenu = () =>{
         <>
         <div className={styles.projectMenu}>
             <ul>
-            <NavLink to= "react" style={{ textDecoration: 'none' }}>
+            <NavLink to= "react" className={({ isActive }) => isActive ? styles.activeLink : styles.inactive}  style={{ textDecoration: 'none' }}>
                 <li>REACT</li>
             </NavLink>
 
-            <NavLink to= "django" style={{ textDecoration: 'none' }}>    
+            <NavLink to= "django" className={({ isActive }) => isActive ? styles.activeLink : styles.inactive} style={{ textDecoration: 'none' }}>    
                 <li>DJANGO</li>
             </NavLink>
             </ul>

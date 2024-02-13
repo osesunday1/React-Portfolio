@@ -9,7 +9,11 @@
     z-index: 2;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
-    
+    transition: 0.5s;
+}
+
+.centerAside:hover{
+  transform: scale(1.05);
 }
 
 .centerAside img {
@@ -100,6 +104,11 @@ Content: '';
       z-index: 0;
     }
 
+    .centerAside:hover{
+      transform: auto;
+    }
+    
+
     .centerAside .cardContent .name{
       position: relative;
       display: inline-block;
@@ -163,4 +172,8 @@ Content: '';
       height: 100%;
       z-index: 0;
     }
+    .centerAside:hover{
+      transform: auto;
+    }
+    
   }
