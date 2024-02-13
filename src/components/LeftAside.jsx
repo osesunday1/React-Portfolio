@@ -10,7 +10,7 @@ import { faBars, faUser, faFile, faDisplay} from '@fortawesome/free-solid-svg-ic
 const LeftAside = () => {
 
 
-    const [isNavVisible, setIsNavVisible] = useState(false);
+    const [isNavVisible, setIsNavVisible] = useState(true);
 
     const toggleNav = () => {
       setIsNavVisible(!isNavVisible);
