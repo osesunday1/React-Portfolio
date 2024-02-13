@@ -22,10 +22,21 @@ const CenterAside = () => {
             </div>
             
             <div className={styles.socialIcons}>
-            <i><FontAwesomeIcon icon={faGithub} /></i>
-            <i><FontAwesomeIcon icon={faLinkedin} /></i>
-            <i><FontAwesomeIcon icon={faTwitter} /></i>
-            <i><FontAwesomeIcon icon={faInstagram} /></i>
+                    <a href="https://github.com/osesunday1?tab=repositories" target="_blank" rel="noopener noreferrer">
+                            <i><FontAwesomeIcon icon={faGithub} /></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/oseyenbhin-sunday-osemeahon-527701128/" target="_blank" rel="noopener noreferrer">
+                            <i><FontAwesomeIcon icon={faLinkedin} /></i>
+                    </a>
+
+                    <a href="https://twitter.com/Galacticos_CEO" target="_blank" rel="noopener noreferrer">
+                            <i><FontAwesomeIcon icon={faTwitter} /></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/dr._ose/" target="_blank" rel="noopener noreferrer">
+                            <i><FontAwesomeIcon icon={faInstagram} /></i>
+                    </a>
             </div>
 
             <div className={styles.cardButtons}>

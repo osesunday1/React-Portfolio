@@ -41,7 +41,7 @@ const App = () => {
               <Route path="/" element= {<Homepage personalInfo= {personalInfo} isLoading={isLoading} />} >
                     <Route path="/" element= {<RightContent personalInfo= {personalInfo} isLoading={isLoading}/>} />
                     <Route path="about" element= {<RightContent personalInfo= {personalInfo} isLoading={isLoading}/>} />
-                    <Route path="education" element= {<RightContentEducation />} />
+                    <Route path="education" element= {<RightContentEducation personalInfo= {personalInfo} isLoading={isLoading}/>} />
                         <Route path="projects" element= {<RightContentProjects personalInfo= {personalInfo} isLoading={isLoading} />}>
                             <Route index element= {<ReactProjects personalInfo={personalInfo}/>} />
                             <Route path="react" element= {<ReactProjects personalInfo={personalInfo}/>} />      

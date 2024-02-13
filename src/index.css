@@ -39,27 +39,35 @@ body {
 /*-----------------------vertical timeline -----------------------*/
 
 
-.vertical-timeline-element--education h3 {
-    color: var(--darkGreen-color); /* Changes the color of <h3> tags */
-    font-size: 17px;
+
+.vertical-timeline-element--education h4 {
+    font-size: 15px;
+    color: var(--white-color);
     font-weight: bold;
 }
 
+.vertical-timeline-element--education h4 span{
+    text-transform: uppercase;
+}
+
 .vertical-timeline-element--education p {
-    font-style: italic; /* Changes the font style of <p> tags */
+    font-style: italic;  
+    color: var(--white-color);
 }
 
 .vertical-timeline-element--education .vertical-timeline-element-content {
-    background: var(--green-color); /* Change to the desired background color */
+    background: var(--darkGreen-color); /* Change to the desired background color */
 }
 
 .vertical-timeline-element-content-arrow{
-    border-right: 7px solid var(--green-color);
+    border-right: 7px solid var(--darkGreen-color);
     
 }
 
 .vertical-timeline-element-date{
     margin-left: 10px;
+    color: var(--darkGreen-color);
+    
 }
 
 .vertical-timeline-element-date{
@@ -69,15 +77,28 @@ body {
 
 
 
-@media(max-width: 500px){
+@media(max-width: 576px){
     body{ 
         background: var(--bg-green);
     }
+
+    .vertical-timeline-element-date{
+        color: var(--white-color);
+        background-color: none;
+        margin-left: 0px;
+    }
+    
     
 }
 
-@media (min-width: 577px) and (max-width: 767px){
+@media(min-width: 577px) and (max-width: 1168px){
     body{ 
         background: var(--bg-green);
+    }
+
+    .vertical-timeline-element-date{
+        color: var(--white-color);
+        background-color: none;
+        margin-left: 0px;
     }
 }

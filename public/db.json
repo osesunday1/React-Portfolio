@@ -15,7 +15,9 @@
             "backendSkills": [{"name": "Node JS", "value": 50}, {"name": "Django", "value": 75},  { "name": "Postgres", "value" :85}, {"name": "Mongo DB", "value": 50}],
             "codingSkills": [ { "name": "Javascript", "value" :85}, {"name": "Python", "value":75},  {"name":"PHP", "value": 70}, {"name":"C#", "value": 40}],
             "reactJob": [{"name":"Blog App", "summary":"A dynamic blog website"} , {"name":"Travel Planner", "summary":"A react JS App to help travelers efficiently plan to-do list"}, {"name":"Accordion", "summary":"Just a display of chained and loose Accordion"}, {"name":"Movie Database", "summary":"An app that collects a plethora of imdb movies and displays them with their rating based on user querry"} ],
-            "djangoJob": [{"name":"Ecommerce App", "summary":"An e-commerce app made for a bouquet company"}, {"name":"Dentist Site", "summary":"A  website made made to publicise and book clients for a dental hospital"}, {"name":"Company Site", "summary":"A travel agency website made made to store and manage clients"}]
+            "djangoJob": [{"name":"Ecommerce App", "summary":"An e-commerce app made for a bouquet company"}, {"name":"Dentist Site", "summary":"A  website made made to publicise and book clients for a dental hospital"}, {"name":"Company Site", "summary":"A travel agency website made made to store and manage clients"}],
+            "education": [{"degree": "Professional Diploma", "country": "Canada", "date": "2023-2025", "course": "Web Development and Internet Applications"}, {"degree": "MSc", "country": "Cyprus", "date": "2018-2020", "course": "Management Information Systems"}, {"degree": "BTech", "country": "Nigeria", "date": "2009-2015", "course": "Management Technology"}    ]
+
         }
 
     

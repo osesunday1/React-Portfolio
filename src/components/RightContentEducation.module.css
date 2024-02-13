@@ -1,5 +1,13 @@
 
 
+.content h4 span{
+    font-size: 15px;
+    color: var(--white-color);
+    font-weight: bold;
+    
+}
+
+
 
 
 /*========================media querry ===========================*/
