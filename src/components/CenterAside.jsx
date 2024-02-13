@@ -7,17 +7,6 @@ import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 const CenterAside = () => {
 
-    const handleDownload = () => {
-        const link = document.createElement('a');
-        link.href = '/resume.pdf'; // Path to your resume PDF file
-        link.download = 'resume.pdf'; // Name of the downloaded file
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      };
-
-
-
     return (  
         <>
 
@@ -52,8 +41,9 @@ const CenterAside = () => {
             </div>
 
             <div className={styles.cardButtons}>
-                    <button onClick={handleDownload}><i><FontAwesomeIcon icon={faDownload} /></i></button>
-              
+                        <a href="https://drive.usercontent.google.com/download?id=1fBSQ2_jjYP7OG-mh5WjKNRkp80N0B7vn&export=download&authuser=0&confirm=t&uuid=878561c6-7a81-4bc9-b98c-c1b1dd248bc6&at=APZUnTXn6KULqg6lpZVrtOSALojR:1707852790620">
+                    <button ><i><FontAwesomeIcon icon={faDownload} /></i></button>
+                    </a>
             </div>
         </div>
         </section>
