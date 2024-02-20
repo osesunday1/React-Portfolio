@@ -26,22 +26,26 @@ const LeftAside = () => {
 
             <div className={`${styles.sideNav} ${isNavVisible ? styles.showNav : ''}`}>
                 <ul>
-                   <li><NavLink to= "about" style={{ textDecoration: 'none' }}>
+                <NavLink to= "about" style={{ textDecoration: 'none' }}>
+                   <li>
                     <i>  <FontAwesomeIcon icon={faUser} /></i>
                         <p>About me</p>
-                    </NavLink></li>
+                    </li>
+                </NavLink>
                
-
-                    <li> <NavLink to= "education" style={{ textDecoration: 'none' }}>  
+                <NavLink to= "education" style={{ textDecoration: 'none' }}>  
+                    <li>
                     <i>  <FontAwesomeIcon icon={faFile} /></i>
                         <p>Resume</p>
-                    </NavLink></li>
+                    </li>
+                    </NavLink>
                
-             
-                    <li> <NavLink to= "projects" style={{ textDecoration: 'none' }}> 
+                    <NavLink to= "projects" style={{ textDecoration: 'none' }}>
+                    <li>  
                     <i><FontAwesomeIcon icon={faDisplay} /></i>
                         <p>Projects</p>
-                    </NavLink></li>
+                    </li>
+                    </NavLink>
                
                 </ul>
             </div>
