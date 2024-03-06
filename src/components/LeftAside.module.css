@@ -55,6 +55,7 @@
     justify-content: center; 
     margin-top: 20px;
     cursor: pointer;
+    
 }
 
 
@@ -261,7 +262,7 @@ li p {
         display: flex;
         flex-direction: row; 
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;;
     }
     
     .leftAside ul li {
