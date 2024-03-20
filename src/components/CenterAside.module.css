@@ -175,5 +175,11 @@ Content: '';
     .centerAside:hover{
       transform: auto;
     }
+
     
+    @media(max-width: 576px){
+      .centerAside:hover{
+        transform: auto;
+      }
+    }
   }
