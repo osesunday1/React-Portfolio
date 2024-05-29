@@ -83,6 +83,13 @@ li p {
     font-size: 12px;
 }
 
+.leftAside .activeLink{
+    color: #c51a1a; /* White color for active state */
+    background: #007bff; /* Bootstrap primary blue for example */
+    padding: 10px;
+    border-radius: 5px;
+}
+
 
 @media(max-width: 576px){
     .leftAside {

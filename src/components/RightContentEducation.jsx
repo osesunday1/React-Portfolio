@@ -24,25 +24,26 @@ const RightContentEducation = ({personalInfo, isLoading}) => {
 
     return (  
                 <>
+                    <section className='sideContent'>
+                        <div className={styles.content}>
+                                <VerticalTimeline lineColor='var(--darkGreen-color)' Height='100%'>
 
-            <div className={styles.content}>
-                    <VerticalTimeline lineColor='var(--darkGreen-color)' Height='100%'>
+                                    {education && education.map((edu)=>(
 
-                        {education && education.map((edu)=>(
+                                        <VerticalTimelineElement className='vertical-timeline-element--education' iconStyle={{background:'var(--darkGreen-color)', color:'#fff'}} icon={<FaGraduationCap />} date = {edu.date}  key= {edu.degree}> 
+                                        <h4>{edu.degree}, <span>{edu.country}</span></h4> 
+                                        <p>{edu.course}</p>
+                                    
+                                        </VerticalTimelineElement>
 
-                            <VerticalTimelineElement className='vertical-timeline-element--education' iconStyle={{background:'var(--darkGreen-color)', color:'#fff'}} icon={<FaGraduationCap />} date = {edu.date}  key= {edu.degree}> 
-                            <h4>{edu.degree}, <span>{edu.country}</span></h4> 
-                            <p>{edu.course}</p>
-                        
-                            </VerticalTimelineElement>
+                                    ))}
 
-                        ))}
+                                    
 
-                        
-
-                        
-                    </VerticalTimeline>
-                </div>
+                                    
+                                </VerticalTimeline>
+                            </div>
+                    </section>
                 </>
     );
 }

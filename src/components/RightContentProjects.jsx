@@ -9,8 +9,12 @@ const RightContentProjects = () => {
 
     return (  
         <>
+        <section className='sideContent'>
+        <section className={styles.sideContent}>
         <ProjectMenu />
         <Outlet />
+        </section>
+        </section>
         </>
     );
 }
@@ -20,7 +24,8 @@ const RightContentProjects = () => {
 const ProjectMenu = () =>{
     return(
         <>
-        <div className={styles.projectMenu}>
+        
+        <div className={styles.projectMenu }>
             <ul>
             <NavLink to= "react" className={({ isActive }) => isActive ? styles.activeLink : styles.inactive}  style={{ textDecoration: 'none' }}>
                 <li>REACT</li>

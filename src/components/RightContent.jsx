@@ -37,11 +37,13 @@ function RightContent({personalInfo, isLoading}) {
         {isLoading ? (
             <div>Loading...</div>
         ) :(<>
+       <section className='sideContent'>
       <MyStory personalInfo={personalInfo}/>
       <ProgrammingSkills personalInfo={personalInfo}/>
       <Stack personalInfo={personalInfo}/>
-
+      </section> 
       </>
+      
 ) }
 </>
 )
