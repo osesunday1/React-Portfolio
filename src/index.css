@@ -97,10 +97,13 @@ body {
     }
 }
 
+
+
 .sideContent{
     background: var(--bg-color);
     height: 100vh;
-    overflow: auto;
+    overflow:auto;
+    scrollbar-width: none;
 }
 
 
