@@ -36,6 +36,18 @@
   
 }
 
+button{
+  width: 90px;
+  height: 40px;
+  border-radius: 20px;
+  background: #2a006e;
+  color: #fff;
+}
+
+button:hover {
+  background: #3f059b;
+}
+
 .modal__content p {
   margin: 20px
 }
