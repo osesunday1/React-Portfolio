@@ -36,7 +36,7 @@ const LeftAside = () => {
                     <NavLink to= "education" style={{ textDecoration: 'none' }}>  
                     <li>
                     <i>  <FontAwesomeIcon icon={faFile} /></i>
-                        <p>Resume</p>
+                        <p>Education</p>
                     </li>
                     </NavLink>
                
