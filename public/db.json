@@ -18,10 +18,10 @@
                 {"name": "Wordpress", "value": 75},  
                 { "name": "Photoshop", "value" :90}],
             "backendSkills": [
-                {"name": "Node JS", "value": 50}, 
+                {"name": "Node JS", "value": 80}, 
                 {"name": "Django", "value": 75},  
                 { "name": "Postgres", "value" :85}, 
-                {"name": "Mongo DB", "value": 50}],
+                {"name": "Mongo DB", "value": 90}],
             "codingSkills": [ 
                 { "name": "Javascript", "value" :85}, 
                 {"name": "Python", "value":75},  
