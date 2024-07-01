@@ -20,12 +20,14 @@
             "backendSkills": [
                 {"name": "Node JS", "value": 80}, 
                 {"name": "Django", "value": 75},  
+                {"name": "PHP", "value": 60},
                 { "name": "Postgres", "value" :85}, 
-                {"name": "Mongo DB", "value": 90}],
+                {"name": "Mongo DB", "value": 90}
+            ],
             "codingSkills": [ 
                 { "name": "Javascript", "value" :85}, 
                 {"name": "Python", "value":75},  
-                {"name":"PHP", "value": 70}, 
+                {"name":"PHP", "value": 60}, 
                 {"name":"C#", "value": 40}],
             "reactJob": [
                 {"name":"Quiz App", "summary":"Interactive React quiz application", "git": "https://github.com/osesunday1/React-Quiz-APP", "url":"https://react-quiz-app-two-eta.vercel.app/" , "description":{"WID": "I developed an interactive React quiz application designed to dynamically fetch questions from a JSON file. The application includes essential features such as timed quizzes, animated feedback based on user performance, and a scoring system that tracks high scores. Additionally, I ensured the application could be deployed on platforms like Vercel by structuring the project appropriately.", "HID": "To create the quiz application, I utilized React's component-based architecture, developing modular and reusable components including the Header, Question, Options, Progress, Timer, and FinishScreen. For managing complex state transitions and actions within the quiz, I employed the useReducer hook, which provided a clean and maintainable state management strategy. The quiz questions were loaded dynamically from a JSON file located in the public directory, allowing easy access and updates without modifying the core application logic. For visual feedback, I integrated Lottie animations, using different animations to represent varying performance levels at the end of the quiz. The application was designed to be responsive, ensuring a consistent user experience across different devices and screen sizes. To prepare the application for deployment on Vercel, I carefully structured file paths and ensured static assets were served from the appropriate locations.", "IMP": "The implementation of animations and a timed quiz mechanism significantly enhanced the user experience, making the application engaging and interactive. The modular design and the use of JSON for question storage made the application scalable and easy to maintain, allowing updates and new features to be added with minimal changes to the codebase. By successfully demonstrating my ability to build, manage, and deploy a full-featured React application, I showcased my practical skills in modern web development, making a strong impression on potential employers. The project also serves as a real-world example of handling asynchronous data fetching, state management, and responsive UI design in a React environment, reflecting the competencies needed for contemporary web development projects."}},
