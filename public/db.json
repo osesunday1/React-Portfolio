@@ -12,7 +12,7 @@
             "freelance": "Available",
             "myStory": "I am a passionate programming enthusiast known for my unyielding eagerness and readiness to tackle challenging projects. With a knack for problem-solving and a perpetual curiosity for technological advancements, I thrive in environments that push the boundaries of my programming skills. Beyond my professional pursuits, I have a genuine love for meeting new people and immersing myself in diverse cultures.",
             "frontendSkills": [
-                {"name": "REACT", "value": 85}, 
+                {"name": "React JS", "value": 85}, 
                 {"name": "HTML, CSS", "value": 95},  
                 { "name": "Javascript", "value" :90}, 
                 {"name": "Wordpress", "value": 75},  
