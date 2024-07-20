@@ -224,7 +224,7 @@ const Stack = ({personalInfo})=>{
            
 
         </div>
-    </div>
+    </div> <br />
         </>
     )
 }
