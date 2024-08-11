@@ -61,7 +61,7 @@ const RightContentExperience = () => {
         <Card key={index}>
           <Company>{job.company}</Company>
           <Location>{job.location}</Location>
-          <Position>{job.position} ({job.duration})</Position>
+          <Position>{job.position} <i>({job.duration})</i></Position>
           <Responsibilities>
             <h4>Responsibilities:</h4>
             <ul>
