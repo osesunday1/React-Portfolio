@@ -30,7 +30,7 @@ const workExperience = [
     company: "Andjemz Tech",
     location: "Nigeria",
     position: "Python Developer",
-    duration: "Previous",
+    duration: "02-2022 - 02-2023",
     responsibilities: [
       "Developed and maintained web applications using Django.",
       "Worked with a team to implement backend services and REST APIs.",
@@ -43,7 +43,7 @@ const workExperience = [
     company: "Cyprus International University",
     location: "Cyprus",
     position: "Lecturer",
-    duration: "Previous",
+    duration: "06-2018 - 02-2022",
     responsibilities: [
       "Supervised students, providing proofreading and feedback on their assignments, projects, and theses.",
       "Conducted lectures on Information Technology topics, including web development.",
