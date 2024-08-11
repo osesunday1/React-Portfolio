@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import Homepage from "./pages/Homepage";
 import RightContent from "./components/RightContent";
 import RightContentEducation from "./components/RightContentEducation";
@@ -39,7 +39,7 @@ const App = () => {
     <BrowserRouter>
         <Routes>
               
-              <Route path="/" element= {<Homepage personalInfo= {personalInfo} isLoading={isLoading} />} >
+                    <Route path="/" element= {<Homepage personalInfo= {personalInfo} isLoading={isLoading} />} >
                     <Route path="/" element= {<RightContent personalInfo= {personalInfo} isLoading={isLoading}/>} />
                     <Route path="experience" element= {<RightContentExperience personalInfo= {personalInfo} isLoading={isLoading}/>} />
                     <Route path="about" element= {<RightContent personalInfo= {personalInfo} isLoading={isLoading}/>} />
@@ -49,7 +49,7 @@ const App = () => {
                             <Route path="react" element= {<ReactProjects personalInfo={personalInfo}/>} />      
                             <Route path="django" element= {<DjangoProjects personalInfo={personalInfo}/>} />
                         </Route>
-
+                    <Route path="*" element={<Navigate to="/" />} />
               </Route>
         </Routes>
     </BrowserRouter>
