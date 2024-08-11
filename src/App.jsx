@@ -6,6 +6,7 @@ import RightContentEducation from "./components/RightContentEducation";
 import RightContentProjects from "./components/RightContentProjects";
 import ReactProjects from "./components/subComponents/ReactProjects";
 import DjangoProjects from "./components/subComponents/DjangoProjects";
+import RightContentExperience from "./components/RightContentExperience";
 
 
 const App = () => {
@@ -40,6 +41,7 @@ const App = () => {
               
               <Route path="/" element= {<Homepage personalInfo= {personalInfo} isLoading={isLoading} />} >
                     <Route path="/" element= {<RightContent personalInfo= {personalInfo} isLoading={isLoading}/>} />
+                    <Route path="experience" element= {<RightContentExperience personalInfo= {personalInfo} isLoading={isLoading}/>} />
                     <Route path="about" element= {<RightContent personalInfo= {personalInfo} isLoading={isLoading}/>} />
                     <Route path="education" element= {<RightContentEducation personalInfo= {personalInfo} isLoading={isLoading}/>} />
                         <Route path="projects" element= {<RightContentProjects personalInfo= {personalInfo} isLoading={isLoading} />}>

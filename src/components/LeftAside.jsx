@@ -3,7 +3,7 @@ import styles from './LeftAside.module.css'
 import {NavLink} from "react-router-dom"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faUser, faGraduationCap, faDisplay} from '@fortawesome/free-solid-svg-icons'
+import { faBars, faUser, faGraduationCap, faDisplay, faBriefcase} from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -27,10 +27,17 @@ const LeftAside = () => {
             <div className={`${styles.sideNav} ${isNavVisible ? styles.showNav : ''}`}>
                 <ul>
                     <NavLink to= "about" style={{ textDecoration: 'none' }}>
-                    <li>
+                        <li>
                         <i>  <FontAwesomeIcon icon={faUser} /></i>
                             <p>About me</p>
                         </li>
+                    </NavLink>
+
+                    <NavLink to= "experience" style={{ textDecoration: 'none' }}>
+                    <li>  
+                    <i><FontAwesomeIcon icon={faBriefcase} /></i>
+                        <p>Experience</p>
+                    </li>
                     </NavLink>
                
                     <NavLink to= "projects" style={{ textDecoration: 'none' }}>
