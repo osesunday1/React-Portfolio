@@ -11,7 +11,6 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 const Section = styled.section`
     width: 80%;
     text-align: center;
-    background: #a51e1e;
     margin: 0 auto;
 
     @media (max-width: 1024px) {
@@ -29,7 +28,6 @@ const MenuBar = styled.div`
     justify-content: center;
     cursor: pointer;
     z-index: 10;
-    background: #1e20a5;
 
     i {
         font-size: 20px;
