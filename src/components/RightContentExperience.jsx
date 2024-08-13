@@ -53,6 +53,72 @@ const workExperience = [
   },
 ];
 
+
+
+const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+`;
+
+const Card = styled.div`
+  background-color: #d9f7f1;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  border: 1px solid var(--darkGreen-color);
+
+  &:hover {
+    transform: scale(1.02);
+  }
+`;
+
+const Company = styled.h2`
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+`;
+
+const Location = styled.h4`
+  margin: 5px 0;
+  font-size: 1em;
+  font-weight: bold;
+  color: #444;
+`;
+
+const Position = styled.p`
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: #555;
+`;
+
+const Responsibilities = styled.div`
+  margin-top: 10px;
+
+  h4 {
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: #444;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 5px;
+    color: #333;
+  }
+`;
+
+
+
 const RightContentExperience = () => {
   return (
     <section className='sideContent'>
@@ -79,57 +145,3 @@ const RightContentExperience = () => {
 
 export default RightContentExperience;
 
-const Section = styled.section`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-`;
-
-const Card = styled.div`
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-
-  &:hover {
-    transform: scale(1.02);
-  }
-`;
-
-const Company = styled.h2`
-  margin: 0;
-  font-size: 1.5em;
-  color: #333;
-`;
-
-const Location = styled.h4`
-  margin: 5px 0;
-  font-size: 1em;
-  color: #666;
-`;
-
-const Position = styled.p`
-  margin: 10px 0;
-  font-size: 1.2em;
-  color: #555;
-`;
-
-const Responsibilities = styled.div`
-  margin-top: 10px;
-
-  h4 {
-    margin-bottom: 5px;
-    color: #444;
-  }
-
-  ul {
-    margin: 0;
-    padding-left: 20px;
-  }
-
-  li {
-    margin-bottom: 5px;
-    color: #333;
-  }
-`;

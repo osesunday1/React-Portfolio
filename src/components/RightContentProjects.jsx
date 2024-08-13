@@ -1,19 +1,15 @@
-import {Outlet } from "react-router-dom"
-import styles from './RightContentProjects.module.css'
+import ReactProjects from "./subComponents/ReactProjects";
 
 
 
 
-const RightContentProjects = () => {
+const RightContentProjects = ({personalInfo}) => {
     
 
     return (  
         <>
-        <section className='sideContent'>
-        <section className={styles.sideContent}>
-        <ProjectMenu />
-        <Outlet />
-        </section>
+        <section className='sideContent'> 
+        <ReactProjects personalInfo={personalInfo}/>
         </section>
         </>
     );
@@ -21,17 +17,6 @@ const RightContentProjects = () => {
 
 
 
-const ProjectMenu = () =>{
-    return(
-        <>
-        
-        <div className={styles.projectMenu }>
-        
-
-        </div>
-        </>
-    )
-}
 
 
 

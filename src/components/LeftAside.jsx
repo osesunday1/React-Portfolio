@@ -1,66 +1,75 @@
 import { useState } from "react";
-import styles from './LeftAside.module.css'
-import {NavLink} from "react-router-dom"
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faUser, faGraduationCap, faDisplay, faBriefcase} from '@fortawesome/free-solid-svg-icons'
-
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import NavLinks from "./NavBar/NavLinks";
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 
-const LeftAside = () => {
 
+// Styled Components
+
+const Section = styled.section`
+    width: 80%;
+    text-align: center;
+    background: #a51e1e;
+    margin: 0 auto;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+`;
+
+const MenuBar = styled.div`
+    height: 70px;
+    border-radius: 10px;
+    color: var(--dark-color);
+    background: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    background: #1e20a5;
+
+    i {
+        font-size: 20px;
+    }
+
+    &:active i {
+        font-size: 10px;
+    }
+
+    &:hover i {
+        color: var(--green-color);
+    }
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+`;
+
+
+
+
+const LeftAside = ({dispatch}) => {
 
     const [isNavVisible, setIsNavVisible] = useState(true);
 
     const toggleNav = () => {
-      setIsNavVisible(!isNavVisible);
+        setIsNavVisible(!isNavVisible);
     };
 
+    return (
+        <Section>
+            <MenuBar onClick={toggleNav}>
+                <FontAwesomeIcon icon={faBars} />
+            </MenuBar>
 
-    return ( 
-        <>
-        <section className={styles.leftAside}>
-        <div className={styles.menuBar} onClick={toggleNav}>
-              <i>  <FontAwesomeIcon icon={faBars} /></i>
-        </div>
+            <NavLinks isNavVisible= {isNavVisible} dispatch= {dispatch}/>
 
-            <div className={`${styles.sideNav} ${isNavVisible ? styles.showNav : ''}`}>
-                <ul>
-                    <NavLink to= "about" style={{ textDecoration: 'none' }}>
-                        <li>
-                        <i>  <FontAwesomeIcon icon={faUser} /></i>
-                            <p>About me</p>
-                        </li>
-                    </NavLink>
-
-                    <NavLink to= "experience" style={{ textDecoration: 'none' }}>
-                    <li>  
-                    <i><FontAwesomeIcon icon={faBriefcase} /></i>
-                        <p>Experience</p>
-                    </li>
-                    </NavLink>
-               
-                    <NavLink to= "projects" style={{ textDecoration: 'none' }}>
-                    <li>  
-                    <i><FontAwesomeIcon icon={faDisplay} /></i>
-                        <p>Projects</p>
-                    </li>
-                    </NavLink>
-
-                    <NavLink to= "education" style={{ textDecoration: 'none' }}>  
-                    <li>
-                    <i>  <FontAwesomeIcon icon={faGraduationCap} /></i>
-                        <p>Education</p>
-                    </li>
-                    </NavLink>
-               
-                </ul>
-            </div>
-
-        </section>
-
-        </>
-     );
+           
+        </Section>
+    );
 }
- 
+
 export default LeftAside;
