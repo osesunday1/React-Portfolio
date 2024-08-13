@@ -40,22 +40,20 @@ const SideNav = styled.div`
 
             i {
                 font-size: 20px;
-                color: var(--dark-color);
+                color: var(--darkGreen-color);
                 padding: 10px;
             }
 
             &:hover i,
             &:hover p {
                 color: var(--green-color);
-            }
-
-            &:active i {
-                font-size: 10px;
+                cursor: pointer;
             }
 
             p {
                 margin-top: 5px;
                 font-size: 12px;
+                color: var(--darkGreen-color);
             }
 
             @media (max-width: 1024px) {
@@ -63,7 +61,10 @@ const SideNav = styled.div`
             padding: 5px 10px;
             margin-top: 0px;
             margin: 0 auto;
-            color: white;
+
+            i {
+             color: var(--bg-color);
+            }    
             }
         }
 
@@ -75,6 +76,8 @@ const SideNav = styled.div`
         p {
                 display: none;
             }
+
+            
         }
     }
 
@@ -90,19 +93,19 @@ const NavLinks = ({isNavVisible, dispatch}) => {
     <SideNav className={isNavVisible ? 'showNav' : ''}>
     <ul>
         <li onClick={()=>dispatch({type: 'bio'})}>
-            <FontAwesomeIcon icon={faUser} />
+            <i><FontAwesomeIcon icon={faUser} /></i> 
             <p>About me</p>
         </li>
         <li onClick={()=>dispatch({type: 'work'})}>
-            <FontAwesomeIcon icon={faBriefcase} />
+        <i><FontAwesomeIcon icon={faBriefcase} /></i> 
             <p>Experience</p>
         </li>
         <li onClick={()=>dispatch({type: 'projects'})}>
-            <FontAwesomeIcon icon={faDisplay} />
+        <i><FontAwesomeIcon icon={faDisplay} /></i> 
             <p>Projects</p>
         </li>
         <li onClick={()=>dispatch({type: 'education'})}>
-            <FontAwesomeIcon icon={faGraduationCap} />
+        <i><FontAwesomeIcon icon={faGraduationCap} /></i> 
             <p>Education</p>
         </li>
     </ul>
