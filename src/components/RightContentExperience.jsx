@@ -4,7 +4,7 @@ const workExperience = [
   {
     company: "Soniwave Tech Inc",
     location: "Canada",
-    position: "Fullstack Developer",
+    position: "Fullstack Developer(intern)",
     duration: "Current",
     responsibilities: [
       "Development of web applications using React.js and Next.js.",
