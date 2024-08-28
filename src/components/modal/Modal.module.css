@@ -6,7 +6,7 @@
   width: 80%;
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  border-radius: 8px;
+  border-radius: 0 0 8px 8px;
   overflow: auto;
 }
 
@@ -15,7 +15,7 @@
   justify-content: center;
   width: 100%;
   padding: 1rem 0.5rem;
-  background: #2a006e;
+  background: var(--darkGreen-color);
   color: white;
 }
 
@@ -40,12 +40,12 @@ button{
   width: 90px;
   height: 40px;
   border-radius: 20px;
-  background: #2a006e;
+  background: var(--darkGreen-color);
   color: #fff;
 }
 
 button:hover {
-  background: #3f059b;
+  background: var(--darkGreen-color);
 }
 
 .modal__content p {
