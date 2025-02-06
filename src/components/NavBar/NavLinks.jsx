@@ -109,13 +109,7 @@ const NavLinks = ({ isNavVisible, dispatch }) => {
           <i><FontAwesomeIcon icon={faBriefcase} /></i>
           <p>Experience</p>
         </li>
-        <li
-          onClick={() => handleItemClick('projects')}
-          className={activeItem === 'projects' ? 'active' : ''}
-        >
-          <i><FontAwesomeIcon icon={faDisplay} /></i>
-          <p>Projects</p>
-        </li>
+      
         <li
           onClick={() => handleItemClick('education')}
           className={activeItem === 'education' ? 'active' : ''}

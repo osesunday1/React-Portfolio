@@ -41,7 +41,7 @@ const CenterAside = () => {
             </div>
 
             <div className={styles.cardButtons}>
-                        <a  href="https://drive.usercontent.google.com/download?id=1fBSQ2_jjYP7OG-mh5WjKNRkp80N0B7vn&export=download&authuser=0&confirm=t&uuid=c92898a4-c964-4376-8893-90d093d06488&at=APZUnTUSp3jk41II_Ke_4tFe9ddh:1710964921848" target="_blank" rel="noopener noreferrer" >
+                        <a  href="https://drive.google.com/file/d/1hU6ywR8rgpYwxRyjyf0DFHRkM2XKSZZ_/view?usp=sharing" target="_blank" rel="noopener noreferrer" >
                     <button ><i><FontAwesomeIcon icon={faDownload} /></i></button>
                     </a>
             </div>

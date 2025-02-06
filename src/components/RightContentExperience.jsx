@@ -2,10 +2,24 @@ import styled from 'styled-components';
 
 const workExperience = [
   {
+    company: "MDL Door Systems",
+    location: "Canada",
+    position: "Software Developer",
+    duration: "08-2024 - Current",
+    responsibilities: [
+      "Participate in the development and implementation of the in-house web application using React.js , Node.js and Express.js.",
+      "Work with HTML, CSS, Tailwind CSS, Styled Components, JavaScript and React.js for the frontend.",
+      "Use Figma to create UI for different views of the system.",
+      "Assisted with managing data using Mongoose as an ORM and MongoDB as the database.",
+      "Use Git and GitHub for version control, collaboration.",
+      "Use EC2 in AWS for deployment of the web application."
+    ],
+  },
+  {
     company: "Soniwave Tech Inc",
     location: "Canada",
-    position: "Fullstack Developer(intern)",
-    duration: "Current",
+    position: "Fullstack Developer",
+    duration: "04-2024 - 07-2024",
     responsibilities: [
       "Development of web applications using React.js and Next.js.",
       "Collaborating with the team on various frontend development tasks.",
@@ -18,7 +32,7 @@ const workExperience = [
     company: "Freelance",
     location: "Canada",
     position: "Frontend Web Developer",
-    duration: "Current",
+    duration: "02-2023 - 08-2023",
     responsibilities: [
       "Building full-stack applications with Node.js, Express.js, MongoDB, and React js, creating efficient and scalable solutions.",
       "Converted designs from Figma into fully functional websites.",
@@ -82,6 +96,7 @@ const Company = styled.h2`
   margin: 0;
   font-size: 1.5em;
   color: #333;
+  font-weight: bold;
 `;
 
 const Location = styled.h4`
@@ -91,18 +106,10 @@ const Location = styled.h4`
   color: #444;
 `;
 
-const Position = styled.p`
-  margin: 10px 0;
-  font-size: 1.2em;
-  color: #555;
-`;
 
 const Responsibilities = styled.div`
-  margin-top: 10px;
-
   h4 {
     font-size: 1em;
-    margin-bottom: 5px;
     color: #444;
   }
 
@@ -117,6 +124,26 @@ const Responsibilities = styled.div`
   }
 `;
 
+const Comb = styled.p`
+  display: flex;
+  gap:5px;
+  margin-bottom:0px;
+`;
+
+const Position = styled.p`
+  font-size: 1.2em;
+  color: var(--darkGreen-color);
+`;
+
+const Duration = styled.p`
+  margin: 3px 0;
+  color: var(--darkGreen-color);
+  font-size: 1em;
+  font-weight: bold;
+  color: #444;
+  
+`;
+
 
 
 const RightContentExperience = () => {
@@ -127,7 +154,10 @@ const RightContentExperience = () => {
         <Card key={index}>
           <Company>{job.company}</Company>
           <Location>{job.location}</Location>
-          <Position>{job.position} <i>({job.duration})</i></Position>
+          <Comb>
+          <Position className=''>{job.position} </Position>
+          <Duration>{job.duration}</Duration>
+          </Comb>
           <Responsibilities>
             <h4>Responsibilities:</h4>
             <ul>
