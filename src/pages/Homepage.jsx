@@ -8,6 +8,8 @@ import { useReducer } from 'react';
 import RightContentExperience from '../components/RightContentExperience';
 import RightContentProjects from '../components/RightContentProjects';
 import RightContentEducation from '../components/RightContentEducation';
+import RightContentSkills from '../components/RightContentSkills';
+import RightContentCertifications from '../components/RightContentCertifications';
 import Header from '../components/Header';
 import useWindowWidth from '../components/UIElements/UseWindowWidth';
 
@@ -36,6 +38,16 @@ function reducer(state, action) {
             return {
                 ...state,
                 content: 'education',
+            };
+        case 'skills':
+            return {
+                ...state,
+                content: 'skills',
+            };
+        case 'certifications':
+            return {
+                ...state,
+                content: 'certifications',
             };
         default:
             throw new Error('Action Unknown');
@@ -82,6 +94,12 @@ const Homepage = ({ personalInfo, isLoading }) => {
                         )}
                         {content === 'education' && (
                             <RightContentEducation personalInfo={personalInfo} isLoading={isLoading} />
+                        )}
+                        {content === 'skills' && (
+                            <RightContentSkills personalInfo={personalInfo} isLoading={isLoading} />
+                        )}
+                        {content === 'certifications' && (
+                            <RightContentCertifications personalInfo={personalInfo} isLoading={isLoading} />
                         )}
                     </motion.div>
                     </AnimatePresence>

@@ -19,7 +19,7 @@ const CenterAside = () => {
             </div>
 
             <div className={styles.specialty}>
-                <p>Full-Stack Developer</p>
+                <p>Senior Full-Stack Software Developer</p>
             </div>
             
             <div className={styles.socialIcons}>
@@ -41,7 +41,7 @@ const CenterAside = () => {
             </div>
 
             <div className={styles.cardButtons}>
-                        <a  href="https://drive.google.com/file/d/1hU6ywR8rgpYwxRyjyf0DFHRkM2XKSZZ_/view?usp=sharing" target="_blank" rel="noopener noreferrer" >
+                        <a href="/Oseyenbhin%20Resume.pdf" download="Oseyenbhin_Osemeahon_Resume.pdf">
                     <button ><i><FontAwesomeIcon icon={faDownload} /></i></button>
                     </a>
             </div>

@@ -1,23 +1,32 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
-import { faUser, faGraduationCap, faDisplay, faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faGraduationCap, faBriefcase, faLaptopCode, faCertificate } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
 const SideNav = styled.div`
-  margin-top: 30px;
+  margin-top: 10px;
+  padding: 16px 10px;
   border-radius: 10px;
   background: var(--bg-color);
-  transform: translateX(-700%);
-  transition: transform 0.3s ease-in-out;
+  transform-origin: top center;
+  transform: scale(0.05);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease-in-out;
 
   &.showNav {
-    transform: translateX(0%);
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto;
   }
 
   @media (max-width: 1024px) {
     margin-top: 0px;
     margin: 0 auto;
-    transform: translateX(0%);
+    padding: 0;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
     height: 100%;
     border-radius: 0px;
     background: var(--darkGreen-color);
@@ -31,11 +40,20 @@ const SideNav = styled.div`
     flex-direction: column;
 
     li {
-      flex-direction: row;
-      padding: 5px 10px;
-      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8px 10px;
+      margin: 0 0 4px 0;
+      border-radius: 8px;
       color: var(--darkGreen-color);
       cursor: pointer;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
 
       /* Apply a different color if the item is active */
       &.active {
@@ -111,11 +129,27 @@ const NavLinks = ({ isNavVisible, dispatch }) => {
         </li>
       
         <li
+          onClick={() => handleItemClick('skills')}
+          className={activeItem === 'skills' ? 'active' : ''}
+        >
+          <i><FontAwesomeIcon icon={faLaptopCode} /></i>
+          <p>Skills</p>
+        </li>
+
+        <li
           onClick={() => handleItemClick('education')}
           className={activeItem === 'education' ? 'active' : ''}
         >
           <i><FontAwesomeIcon icon={faGraduationCap} /></i>
           <p>Education</p>
+        </li>
+
+        <li
+          onClick={() => handleItemClick('certifications')}
+          className={activeItem === 'certifications' ? 'active' : ''}
+        >
+          <i><FontAwesomeIcon icon={faCertificate} /></i>
+          <p>Certifications</p>
         </li>
       </ul>
     </SideNav>

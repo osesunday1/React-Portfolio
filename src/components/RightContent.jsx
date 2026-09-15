@@ -1,241 +1,221 @@
-import React from 'react';
-import styles from './RightContent.module.css'
-import { CircularProgressbar } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import ProgressBar from 'react-bootstrap/ProgressBar';
-
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faPhone,
+  faEnvelope,
+  faLocationDot,
+  faCity,
+  faBolt,
+} from '@fortawesome/free-solid-svg-icons';
 
+const strengths = ["React.js", "Node.js", "Python", "AWS", "Microservices", "Cloud Architecture", "CI/CD", "DevOps"];
 
-const Heading1 = styled.div`
-display: none; /* Hide by default */
+const highlights = [
+  "10,000+ users supported",
+  "70% lower deployment costs",
+  "45% faster API responses",
+  "60% more throughput",
+  "50% fewer incidents",
+  "65% lower MTTR",
+];
 
-@media (max-width: 1024px) {
-display: block; }`
+const Section = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+`;
 
-const Heading2 = styled.div`
-display: none; /* Hide by default */
+const Card = styled.div`
+  background-color: #d9f7f1;
+  padding: 18px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  border: 1px solid var(--darkGreen-color);
 
-@media (min-width: 1024px) {
-display: block; 
-}
-`
+  &:hover {
+    transform: scale(1.01);
+  }
+`;
 
+const Heading = styled.h1`
+  margin: 0 0 12px 0;
+  font-size: var(--h1-font);
+  font-weight: bold;
+  border-bottom: solid 1px var(--green-color);
+  padding-bottom: 6px;
 
+  span {
+    color: var(--darkGreen-color);
+  }
+`;
 
-function RightContent({personalInfo, isLoading}) {
-    
+const Title = styled.p`
+  margin: 0 0 12px 0;
+  font-weight: 600;
+  color: var(--darkGreen-color);
+  font-size: 1em;
+`;
 
-        // First, check if it's loading
-        if (isLoading) {
-            return <div>Loading...</div>;
-        }
-    
-        // Then, check if personalInfo is not null before trying to access its properties
-        if (!personalInfo) {
-            return <div>No personal information available.</div>;
-        }
-    return(
-        <>
-        {isLoading ? (
-            <div>Loading...</div>
-        ) :(<>
-       <section className='sideContent'>
-      <MyStory personalInfo={personalInfo}/>
-      <ProgrammingSkills personalInfo={personalInfo}/>
-      <Stack personalInfo={personalInfo}/>
-      </section> 
-      </>
-      
-) }
-</>
-)
+const Story = styled.p`
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+  margin: 0;
+  color: #333;
+`;
 
-}
+const TagList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+`;
 
+const StrengthTag = styled.span`
+  background: var(--white-color);
+  border: 1px solid var(--darkGreen-color);
+  color: #333;
+  font-size: 0.82em;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+`;
 
+const HighlightBadge = styled.span`
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--darkGreen-color);
+  color: var(--white-color);
+  font-size: 0.75em;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+`;
 
-const MyStory = ({personalInfo})=>{
+const BioGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
 
-    return(
-        <>
-         <div className={styles.content}>
-           
-            <div className={styles.heading}>
-                <h1><span>About</span> ME </h1>
-            </div>
-        
-            <div className={styles.info}>
-                <p>
-                {personalInfo.myStory}  
-                </p>
-            </div>
+  @media (max-width: 576px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`;
 
-            <Heading1>
-        <div className={styles.heading}>
-                        <h1><span>Bio</span> </h1>
-        </div>
-        </Heading1>
+const BioItem = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
-            <div className={styles.info}>
-            <div className={styles.residence}>
-                    <h4>Number...</h4>
-                    <div className={styles.paragraph}>{personalInfo.phone}</div>
-                </div>
-                <div className={styles.residence}>
-                    <h4>Email...</h4>
-                    <div className={styles.paragraph}>{personalInfo.email}</div>
-                </div>
-                <div className={styles.residence}>
-                    <h4>Residence...</h4>
-                    <div className={styles.paragraph}>{personalInfo.residence}</div>
-                </div>
-                <div className={styles.residence}>
-                    <h4>City...</h4>
-                    <div className={styles.paragraph}>{personalInfo.city}</div>
-                </div>
-                
-            </div>
-    </div>
-        </>
-    )
-}
+  svg {
+    color: var(--darkGreen-color);
+    min-width: 16px;
+  }
 
+  div {
+    overflow: hidden;
+  }
 
+  h4 {
+    margin: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    color: #666;
+  }
 
+  p {
+    margin: 2px 0 0 0;
+    font-size: 15px;
+    color: #333;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+`;
 
+function RightContent({ personalInfo, isLoading }) {
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
+  if (!personalInfo) {
+    return <div>No personal information available.</div>;
+  }
 
-const ProgrammingSkills = ({personalInfo}) => {
-    
-    const skills= personalInfo.codingSkills
-    return ( 
-        <>
-        <div className={styles.heading2}>
-                <h1><span>Programming</span> LANGUAGES</h1>
-            </div>
-         <div className={styles.content2}>
+  return (
+    <section className='sideContent'>
+      <Section>
+        <Card>
+          <Heading><span>About</span> ME</Heading>
+          <Title>Senior Full-Stack Software Developer</Title>
+          <Story>{personalInfo.myStory}</Story>
+        </Card>
 
-           <div className={styles.info2}>
-
-            {skills && skills.map((skill)=>(
-                <React.Fragment key={skill.name}>
-           <LanguageChart percent={skill.value}  language={skill.name}/>
-            </React.Fragment>
+        <Card>
+          <Heading><span>Core</span> STRENGTHS</Heading>
+          <TagList>
+            {strengths.map((strength) => (
+              <StrengthTag key={strength}>{strength}</StrengthTag>
             ))}
+          </TagList>
+        </Card>
 
-            </div>
-        </div>
-        </>
-    );
+        <Card>
+          <Heading><span>Impact</span> HIGHLIGHTS</Heading>
+          <TagList>
+            {highlights.map((highlight) => (
+              <HighlightBadge key={highlight}>
+                <FontAwesomeIcon icon={faBolt} />
+                {highlight}
+              </HighlightBadge>
+            ))}
+          </TagList>
+        </Card>
+
+        <Card>
+          <Heading><span>Bio</span> &amp; CONTACT</Heading>
+          <BioGrid>
+            <BioItem>
+              <FontAwesomeIcon icon={faPhone} />
+              <div>
+                <h4>Phone</h4>
+                <p>{personalInfo.phone}</p>
+              </div>
+            </BioItem>
+            <BioItem>
+              <FontAwesomeIcon icon={faEnvelope} />
+              <div>
+                <h4>Email</h4>
+                <p>{personalInfo.email}</p>
+              </div>
+            </BioItem>
+            <BioItem>
+              <FontAwesomeIcon icon={faLocationDot} />
+              <div>
+                <h4>Residence</h4>
+                <p>{personalInfo.residence}</p>
+              </div>
+            </BioItem>
+            <BioItem>
+              <FontAwesomeIcon icon={faCity} />
+              <div>
+                <h4>City</h4>
+                <p>{personalInfo.city}</p>
+              </div>
+            </BioItem>
+          </BioGrid>
+        </Card>
+      </Section>
+    </section>
+  );
 }
-
-
-const customStyles = {
-    
-    path: {
-      // Path color
-      stroke: '#0a7560',
-      // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
-      transition: 'stroke-dashoffset 0.5s ease 0s',
-    },
-    // Customize the trail, i.e. the "unfilled" portion
-    trail: {
-      stroke: '#d6d6d6',
-    },
-   
-  };
-
-
-const LanguageChart = ({percent=90, language='Javascript'})=> {
-
-    const percentage = percent;
-    return(
-        <>
-        <div className={styles.chart}>
-                    <div style={{ position: 'relative', width: '200px', height: '200px' }}> {/* Adjust size as needed */}
-                        <CircularProgressbar styles= {customStyles}
-                            value={percentage}
-                            // Add other styles if needed
-                        />
-                        <div className={styles.chartInfo}>
-                            {language}
-                        </div>
-                        <div className={styles.chartInfoPercentage}>
-                            {`${percentage}%`}
-                        </div>
-                    </div>
-                </div>
-        </>
-    )
-}
-
-
-
-
-
-const Stack = ({personalInfo})=>{
-    const frontEnd= personalInfo.frontendSkills
-    const backEnd= personalInfo.backendSkills
-
-
-     
-    return(
-        <>
-        
-         <div className={styles.content}>
-           
-                <div className={styles.heading}>
-                        <h1><span>Front</span> End </h1>
-                        <Heading2>    <h1 ><span>Back</span> End </h1></Heading2> 
-                </div>
-        
-               
-        <div className={styles.info} >
-        { frontEnd && frontEnd.map((front)=>(
-            <React.Fragment key={front.name}>
-            <div className={styles.stack} >
-                    <h5>{front.name}</h5>
-                    <h5> <span>{front.value} %</span> </h5>
-                    
-            </div>
-            <ProgressBar now={front.value} style={{ height: "5px", backgroundColor: '#d6d6d6'}} variant="success" />
-            </React.Fragment>
-        ))}
-            
-           
-
-        </div>
-        
-        <Heading1>
-        <div className={styles.heading}>
-                        <h1><span>Back</span> End </h1>
-        </div>
-        </Heading1>
-        <div className={styles.info} >
-        { backEnd && backEnd.map((back)=>(
-            <React.Fragment key={back.name}>
-            <div className={styles.stack} >
-                    <h5>{back.name}</h5>
-                    <h5> <span>{back.value} %</span> </h5>
-                    
-            </div>
-            <ProgressBar now={back.value} style={{ height: "5px", backgroundColor: '#d6d6d6'}} variant="success"   />
-            </React.Fragment>
-        ))}
-            
-           
-
-        </div>
-    </div> <br />
-        </>
-    )
-}
-
-
-
-
-
 
 export default RightContent;
